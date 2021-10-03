@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jImEZclOyiDtgSHqgEQ/PeSaaMsODJ4+fnjiaBIz7jkBXa/8HQ1ChqVNWKpsV9T1ZihCnvaDVIgR6sxDxDNaGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vitor.moreira\\source\\repos\\tcc-game-store\\TCC.GameStore\\TCC.Domain\\TCC.GameStore.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vitor.moreira\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
