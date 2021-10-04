@@ -1,7 +1,7 @@
 ﻿using System;
 using TCC.GameStore.Domain.Entities;
 
-namespace TCC.GameStore.Domain.Builder
+namespace TCC.GameStore.Domain.Builders
 {
     public class GameBuilder
     {

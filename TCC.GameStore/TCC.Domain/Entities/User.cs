@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using TCC.GameStore.Domain.Builder;
+using TCC.GameStore.Domain.Builders;
 using TCC.GameStore.Domain.Validations;
 
 namespace TCC.GameStore.Domain.Entities
@@ -25,10 +25,11 @@ namespace TCC.GameStore.Domain.Entities
                Password = builder.Password,
            };
 
-        public void Update(string name, string email)
+        public void UpdateUser(User updatedUser)
         {
-            Name = name;
-            Email = email;
+            Name = updatedUser.Name;
+            Email = updatedUser.Email;
+            Password = updatedUser.Password;
             UpdatedAt = DateTime.Now;
         }
     }

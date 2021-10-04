@@ -1518,6 +1518,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "TCC.GameStore.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "TCC.GameStore.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TCC.GameStore.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TCC.GameStore.Application.dll": {}
+        }
+      },
       "TCC.GameStore.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5808,6 +5821,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "TCC.GameStore.Application/1.0.0": {
+      "type": "project",
+      "path": "../TCC.Application/TCC.GameStore.Application.csproj",
+      "msbuildProject": "../TCC.Application/TCC.GameStore.Application.csproj"
+    },
     "TCC.GameStore.Domain/1.0.0": {
       "type": "project",
       "path": "../TCC.Domain/TCC.GameStore.Domain.csproj",
@@ -5823,6 +5841,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.10",
+      "TCC.GameStore.Application >= 1.0.0",
       "TCC.GameStore.Infra >= 1.0.0"
     ]
   },
@@ -5853,6 +5872,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Users\\vitor.moreira\\source\\repos\\tcc-game-store\\TCC.GameStore\\TCC.Application\\TCC.GameStore.Application.csproj": {
+              "projectPath": "C:\\Users\\vitor.moreira\\source\\repos\\tcc-game-store\\TCC.GameStore\\TCC.Application\\TCC.GameStore.Application.csproj"
+            },
             "C:\\Users\\vitor.moreira\\source\\repos\\tcc-game-store\\TCC.GameStore\\TCC.GameStore.Infra\\TCC.GameStore.Infra.csproj": {
               "projectPath": "C:\\Users\\vitor.moreira\\source\\repos\\tcc-game-store\\TCC.GameStore\\TCC.GameStore.Infra\\TCC.GameStore.Infra.csproj"
             }

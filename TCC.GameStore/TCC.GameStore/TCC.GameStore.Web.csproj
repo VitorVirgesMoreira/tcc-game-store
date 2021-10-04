@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="DependencyInjection\Application\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TCC.Application\TCC.GameStore.Application.csproj" />
     <ProjectReference Include="..\TCC.GameStore.Infra\TCC.GameStore.Infra.csproj" />
   </ItemGroup>
 

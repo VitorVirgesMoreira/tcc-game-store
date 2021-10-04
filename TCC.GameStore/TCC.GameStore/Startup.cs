@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TCC.GameStore.Infra.Context;
+using TCC.GameStore.Web.DependencyInjection.Application;
 using TCC.GameStore.Web.DependencyInjection.Repository;
 
 namespace TCC.GameStore
@@ -36,6 +37,7 @@ namespace TCC.GameStore
             });
 
             new Repositories().AddRepositoriesDependencyInjection(services);
+            new Services().AddServicesDependencyInjection(services);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

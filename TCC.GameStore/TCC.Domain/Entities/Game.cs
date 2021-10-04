@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
-using TCC.GameStore.Domain.Builder;
+using TCC.GameStore.Domain.Builders;
 using TCC.GameStore.Domain.Validations;
 
 namespace TCC.GameStore.Domain.Entities
@@ -26,5 +26,14 @@ namespace TCC.GameStore.Domain.Entities
                DateLaunch = builder.DateLaunch,
                Price = builder.Price
            };
+
+        public void UpdateGame(Game updatedGame)
+        {
+            Name = updatedGame.Name;
+            Developer = updatedGame.Developer;
+            DateLaunch = updatedGame.DateLaunch;
+            Price = updatedGame.Price;
+            UpdatedAt = DateTime.Now;
+        }
     }
 }
