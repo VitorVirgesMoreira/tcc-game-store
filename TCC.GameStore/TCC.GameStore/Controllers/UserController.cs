@@ -47,7 +47,7 @@ namespace TCC.GameStore.Web.Controllers
         }
 
         [HttpPut]
-        [Route("delete")]
+        [Route("delete/{id}")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             try
