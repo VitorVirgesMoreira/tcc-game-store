@@ -2,5 +2,6 @@
 {
     public class GameRequestModel : GameAbstractModel
     {
+        public string Price { get; set; }
     }
 }

@@ -50,15 +50,15 @@ namespace TCC.GameStore.Application.Services
             await _userRepository.Save();
         }
 
-        public async Task<UserResponseModel> GetById(int id)
+        public async Task<UserResponseModel> GetByEmail(string email)
         {
-            var user = await _userRepository.GetById(id);
+            var user = await _userRepository.GetByEmail(email);
             if (user == null)
             {
                 throw new NotFoundException("Usuário não encontrado.");
             }
 
-            return new UserResponseModel(user.Id, user.Name, user.Email, user.CreatedAt, user.UpdatedAt);
+            return new UserResponseModel(user.Id, user.Name, user.Email, user.Password, user.CreatedAt, user.UpdatedAt);
         }
 
         public async Task<IEnumerable<UserResponseModel>> GetAll()
@@ -69,7 +69,7 @@ namespace TCC.GameStore.Application.Services
                 throw new NotFoundException("Usuários não encontrados.");
             }
 
-            return users.Select(x => new UserResponseModel(x.Id, x.Name, x.Email, x.CreatedAt, x.UpdatedAt));
+            return users.Select(x => new UserResponseModel(x.Id, x.Name, x.Email, x.Password, x.CreatedAt, x.UpdatedAt));
         }
 
         private User UserBuild(UserRequestModel model)

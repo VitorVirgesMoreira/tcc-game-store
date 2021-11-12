@@ -28,9 +28,9 @@ namespace TCC.GameStore.Domain.Builders
             return this;
         }
 
-        public GameBuilder SetPrice(double price)
+        public GameBuilder SetPrice(string price)
         {
-            this.Price = price;
+            this.Price = Double.TryParse(price, out double newPrice) ? newPrice : 0;
             return this;
         }
 

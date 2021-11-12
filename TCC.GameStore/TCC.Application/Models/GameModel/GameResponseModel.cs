@@ -7,6 +7,7 @@ namespace TCC.GameStore.Application.Models.GameModel
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
+        public double Price { get; set; }
 
         public GameResponseModel(int id, string name, string developer, DateTime dateLaunch, double price, DateTime createdAt, DateTime updatedAt)
         {

@@ -9,7 +9,7 @@ namespace TCC.GameStore.Application.Services.Interfaces
         Task CreateUser(UserRequestModel requestModel);
         Task UpdateUser(int userId, UserRequestModel requestModel);
         Task DeleteUser(int userId);
-        Task<UserResponseModel> GetById(int id);
+        Task<UserResponseModel> GetByEmail(string email);
         Task<IEnumerable<UserResponseModel>> GetAll();
     }
 }

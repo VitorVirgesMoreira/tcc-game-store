@@ -62,12 +62,12 @@ namespace TCC.GameStore.Web.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
-        public async Task<IActionResult> GetById([FromRoute] int id)
+        [Route("get-by-email/{email}")]
+        public async Task<IActionResult> GetByEmail([FromRoute] string email)
         {
             try
             {
-                return Ok(await _userService.GetById(id));
+                return Ok(await _userService.GetByEmail(email));
             }
             catch (Exception ex)
             {
