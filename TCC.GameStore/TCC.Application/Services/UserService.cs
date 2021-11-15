@@ -20,10 +20,19 @@ namespace TCC.GameStore.Application.Services
 
         public async Task CreateUser(UserRequestModel requestModel)
         {
-            var user = UserBuild(requestModel);
-            user.ValidateEntity();
-            await _userRepository.Create(user);
-            await _userRepository.Save();
+            var userAlreadyRegistered = await _userRepository.GetByEmail(requestModel.Email);
+
+            if (userAlreadyRegistered == null)
+            {
+                var user = UserBuild(requestModel);
+                user.ValidateEntity();
+                await _userRepository.Create(user);
+                await _userRepository.Save();
+            }
+            else
+            {
+                throw new CustomValidationException("Usuário já cadastrado!");
+            }
         }
 
         public async Task UpdateUser(int userId, UserRequestModel requestModel)
